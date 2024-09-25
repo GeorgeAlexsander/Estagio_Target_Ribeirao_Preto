@@ -40,29 +40,35 @@ Este repositório contém soluções para as questões do desafio Target, voltad
 
 5. **Interruptores e Lâmpadas**: 
    - Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes. Seu objetivo é descobrir qual interruptor controla qual lâmpada, usando apenas duas idas até uma das salas. Como você faria isso?
+   
    Para resolver, podemos:
-   - Liguar um interruptor e deixar o mesmo ligado por alguns minutos. Em seguida, desligar e ligar um segundo interruptor.
+   - Ligar um interruptor e deixar o mesmo ligado por alguns minutos. Em seguida, desligar e ligar um segundo interruptor.
    Assim, quando irmos na sala com as lâmpadas, teremos três casos:
    - a) Lâmpada desligada e quente, referente ao primeiro interruptor ligado.
    - b) Lâmpada ligada e fria, referente ao ultimo interruptor ligado.
    - c) Lâmpada desligada e fria, referente ao interruptor não acionado.
+   
    Esta primeira solução, tem como pré-requisito que as lâmpadas sejam suscetíveis ao efeito Joule, ou seja, aqueçam durante seu acionamento. Para uma análise ainda mais precisa, considerando que não haja contato direto com a lâmpada, poder-se-ia fazer a seguinte solução:
    - a) Ligar o primeiro interruptor: ligue o primeiro interruptor e deixe-o ligado.
    - b) Ligar o segundo interruptor: ligue o segundo interruptor e deixe-o ligado.
    - c) Desligar o segundo interruptor: desligue o terceiro interruptor e deixe-o desligado.
+
 Vá até a sala em que estão as lampadas (primeira ida)
    - a) Veja quais lâmpadas estão ligadas, poderemos, por exemplo, ter:
    - Lâmpada A (Ligada);
    - Lâmpada B (Ligada); 
    - Lâmpada C (Desligada).
+
 Volte para a sala com os interruptores, agora iremos desligar um dos interruptores e acionar o que não foi acionado, teremos, por exemplo:
    - a) Desligue o primeiro interruptor: desligue o primeiro interruptor e deixe-o Desligado.
    - b) Ligar o segundo interruptor: ligue o segundo interruptor e deixe-o ligado.
    - c) Ligue o segundo interruptor: ligue o terceiro interruptor e deixe-o ligado.
+
 Vá até a sala (segunda ida), agora, uma das lampadas que foram acesas no primeiro caso, a outra que estava acesa, estará desligada e a que estava acessa, será ligada, teremos algo como:
    - Lâmpada A (Ligada);
    - Lâmpada B (Desligada); 
    - Lâmpada C (Ligada).
+
 Assim, pode-se concluir que:
   - Interruptor A, que foi desligado na segunda ida, corresponde a lâmpada B, que foi desligada após a alteração;
   - Interruptor B, que foi mantido ligado, corresponde a lâmpada A, que seguiu acionada;
